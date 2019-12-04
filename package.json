@@ -1,0 +1,26 @@
+{
+  "name": "learn-pixi2",
+  "version": "1.0.0",
+  "description": "",
+  "default": "dist/index.html",
+  "targets": {
+    "default": {
+      "publicUrl": "./"
+    }
+  },
+  "scripts": {
+    "dev": "parcel index.html -p 8080",
+    "build": "parcel build index.html",
+    "prebuild": "rm -rf dist"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gsap": "^3.0.1",
+    "pixi.js": "^5.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.0.0-alpha.3.2"
+  }
+}
