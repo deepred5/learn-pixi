@@ -9,12 +9,22 @@ const app = new Application({
   backgroundColor: 0x1d9ce0
 });
 
-document.body.appendChild(app.view);
+window.app = app;
 
-const avatar = new Sprite.from('http://anata.me/img/avatar.jpg');
-avatar.scale.set(0.5, 0.5);
-avatar.interactive = true;
-avatar.on('click', () => {
-  console.log('deepred');
-})
-app.stage.addChild(avatar);
+const myContainer = new Container();
+let rectangle = new Graphics();
+rectangle.beginFill(0x000000);
+rectangle.drawRect(0, 0, 64, 64);
+rectangle.endFill();
+
+let rectangle2 = new Graphics();
+rectangle.beginFill(0xFFFFFF);
+rectangle2.drawRect(0, 0, 64, 64);
+rectangle2.endFill();
+
+myContainer.addChild(rectangle);
+myContainer.addChild(rectangle2);
+
+app.stage.addChild(myContainer);
+
+document.body.appendChild(app.view);
